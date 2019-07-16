@@ -1,0 +1,24 @@
+function breakingRecords(scores)
+{
+    var curntLow = scores[0];
+    var curntHigh = scores[0];
+    var countLow = 0;
+    var countHigh = 0;
+    
+    for (var i = 0; i < scores.length; i++)
+    {
+        if (scores[i] < curntLow)
+        {
+            curntLow = scores[i];
+            countLow++;
+        }
+        else if (scores[i] > curntHigh)
+        {
+            curntHigh = scores[i];
+            countHigh++; 
+        }
+        
+    }
+    return[countHigh, countLow];
+    
+}
